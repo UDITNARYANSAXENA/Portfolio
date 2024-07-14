@@ -19,7 +19,7 @@ function About() {
         <ol>
           <li>Bachelor of Technology from Dr. A.P.J. ABDUL KALAM TECHNICAL TECHNICAL UNIVERSITY , LUCKNOW , 2025 </li>
          <li> Intermediate (10+2) from Central Board of Secondary Education , Delhi , 2021 </li>
-         <li> High School from Central Board of Secondary Education , Delhi , 2021 </li>
+         <li> High School from Central Board of Secondary Education , Delhi , 2019 </li>
         </ol>
         <br />
         <h1 className="text-amber-900 font-semibold text-xl"> Skills </h1>

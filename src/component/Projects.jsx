@@ -51,7 +51,6 @@ function Projects() {
       demo: "https://educational-jet.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/educational",
     },
-    
     {
       id: 7,
       logo: random,
@@ -62,23 +61,23 @@ function Projects() {
   ];
 
   const Card = ({ logo, name, demo, sourceCodeLink }) => (
-    <div className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-105 duration-300">
+    <div className="md:w-[280px] md:h-[300px] border-2 rounded-lg shadow-lg p-5 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
       <img
         src={logo}
-        className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
+        className="w-[150px] h-[150px] mx-auto p-1 rounded-full border-2 mb-4 object-cover"
         alt={name}
       />
       <div>
-        <div className="px-2 font-bold text-xl mb-2">{name}</div>
+        <div className="text-center font-bold text-xl mb-2">{name}</div>
       </div>
-      <div className="px-6 py-4 space-x-3 justify-around">
+      <div className="flex justify-center space-x-3">
         <a href={demo} target="_blank" rel="noopener noreferrer">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded transition-colors duration-300 ease-in-out">
             Try this 
           </button>
         </a>
         <a href={sourceCodeLink} target="_blank" rel="noopener noreferrer">
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
+          <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded transition-colors duration-300 ease-in-out">
             Source code
           </button>
         </a>
@@ -88,9 +87,11 @@ function Projects() {
 
   return (
     <div
-    name="Projects" className="max-w-screen2xl container mx-auto px-4 md:px-18 my-16">
+      name="Projects"
+       className="max-w-screen2xl container mx-auto px-4 md:px-20 my-16"
+    >
       <h1 className="text-3xl font-bold mb-5">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 my-5">
         {cardItems.map((item) => (
           <Card
             key={item.id}

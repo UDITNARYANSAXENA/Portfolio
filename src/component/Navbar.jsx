@@ -19,15 +19,20 @@ function Navbar() {
             id:3,
             text:"Projects"
         },
-        
         {
             id:4,
-            text:"Experience"
+            text:"Certification"
         },
         {
             id:5,
+            text:"Experience"
+        },
+        {
+            id:6,
             text:"Contact"
         },
+    
+    
     ]
   return (
     <>
