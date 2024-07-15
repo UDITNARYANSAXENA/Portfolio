@@ -51,6 +51,14 @@ function Projects() {
       demo: "https://random-image-xi.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Random-image",
     },
+    
+    {
+      id: 7,
+      logo: random,
+      name: "Food ordering site",
+      demo: "https://food-junction.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-junction",
+    },
   ];
 
   const Card = ({ logo, name, demo, sourceCodeLink }) => (
