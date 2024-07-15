@@ -20,8 +20,8 @@ function Projects() {
       id: 2,
       logo: temperature,
       name: "Temperature Convertor",
-      demo: "https://temperatureconvertor-gamma.vercel.app/",
-      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/temperatureconvertor",
+      demo: "https://tempconvert-plum.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/tempconvert",
     },
     {
       id: 3,
