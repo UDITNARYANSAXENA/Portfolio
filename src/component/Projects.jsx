@@ -54,7 +54,7 @@ function Projects() {
     
     {
       id: 7,
-      logo: random,
+      logo: food,
       name: "Food ordering site",
       demo: "https://food-junction.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-junction",
