@@ -7,6 +7,7 @@ import food from "../../public/food.jpg";
 import calculator from "../../public/calculator.jpg";
 import random from "../../public/random.png";
 import qr from "../../public/qrgenerator.png";
+import text from "../../public/textto.png"
 
 function Projects() {
   const cardItems = [
@@ -66,6 +67,13 @@ function Projects() {
       name: "QR code Generator",
       demo: "https://qr-code-generatorbyudi.tiiny.site/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/QR-code-generator",
+    },
+    {
+      id: 9,
+      logo: text,
+      name: "Text 2 Speech Convertor",
+      demo: "https://texttospeech-xi.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/texttospeech",
     },
   ];
 
