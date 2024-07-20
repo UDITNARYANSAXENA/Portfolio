@@ -6,6 +6,7 @@ import temperature from "../../public/temperature.png";
 import food from "../../public/food.jpg";
 import calculator from "../../public/calculator.jpg";
 import random from "../../public/random.png";
+import qr from "../../public/qrgenerator.png";
 
 function Projects() {
   const cardItems = [
@@ -58,6 +59,13 @@ function Projects() {
       name: "Food ordering site",
       demo: "https://food-junction.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-junction",
+    },
+    {
+      id: 8,
+      logo: qr,
+      name: "QR code Generator",
+      demo: "https://qr-code-generatorbyudi.tiiny.site/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/QR-code-generator",
     },
   ];
 
