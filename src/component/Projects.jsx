@@ -8,6 +8,7 @@ import calculator from "../../public/calculator.jpg";
 import random from "../../public/random.png";
 import qr from "../../public/qrgenerator.png";
 import text from "../../public/textto.png"
+import greeting from "../../public/greeting.png"
 
 function Projects() {
   const cardItems = [
@@ -78,8 +79,8 @@ function Projects() {
     
     {
       id: 10,
-      logo: text,
-      name: "Greetings",
+      logo: greeting,
+      name: "greeting",
       demo: "https://greet-tan.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/greet",
     },
