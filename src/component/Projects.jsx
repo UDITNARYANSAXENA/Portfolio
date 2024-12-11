@@ -75,6 +75,14 @@ function Projects() {
       demo: "https://texttospeech-xi.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/texttospeech",
     },
+    
+    {
+      id: 10,
+      logo: text,
+      name: "Greetings",
+      demo: "https://greet-tan.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/greet",
+    },
   ];
 
   const Card = ({ logo, name, demo, sourceCodeLink }) => (
