@@ -9,6 +9,7 @@ import random from "../../public/random.png";
 import qr from "../../public/qrgenerator.png";
 import text from "../../public/textto.png"
 import greeting from "../../public/greeting.png"
+import delivery from "../../public/fooddelivery.png"
 
 function Projects() {
   const cardItems = [
@@ -83,6 +84,20 @@ function Projects() {
       name: "greeting",
       demo: "https://greet-tan.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/greet",
+    },
+    {
+      id: 11,
+      logo: delivery,
+      name: "Food Delivery User Panel",
+      demo: "https://food-delivery-nrha.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-delivery",
+    },
+    {
+      id: 12,
+      logo: delivery,
+      name: "Food Delivery Admin Panel",
+      demo: "https://food-delivery-sooty-three.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-delivery",
     },
   ];
 

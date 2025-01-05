@@ -25,10 +25,10 @@ function Home() {
               <h1>Hello , I'm a </h1>
               {/* <span > Developer</span>*/}
               <ReactTyped
-                className="text-red-700 font-bold"
-                strings={["Coder", "Developer", "Programmer"]}
-                typeSpeed={80}
-                backSpeed={50}
+                className="text-blue-700 font-bold"
+                strings={["Coder", "Developer"]}
+                typeSpeed={90}
+                backSpeed={70}
                 loop={true}
               />
             </div>
