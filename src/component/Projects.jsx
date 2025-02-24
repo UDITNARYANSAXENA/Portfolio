@@ -11,6 +11,7 @@ import text from "../../public/textto.png"
 import greeting from "../../public/greeting.png";
 import delivery from "../../public/delivery.png";
 import expense from "../../public/expense.png";
+import stopwatch from "../../public/stopwatch.png"
 
 
 
@@ -107,6 +108,14 @@ function Projects() {
       demo: "https://expense-manager-eta-two.vercel.app/login",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/expense-manager",
     },
+    {
+      id: 14,
+      logo: stopwatch,
+      name: "Stop Watch",
+      demo: "https://stop-watch-beta-two.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/StopWatch",
+    },
+
   ];
 
   const Card = ({ logo, name, demo, sourceCodeLink }) => (
