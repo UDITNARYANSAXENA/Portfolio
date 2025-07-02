@@ -12,48 +12,76 @@ import greeting from "../../public/greeting.png";
 import delivery from "../../public/delivery.png";
 import expense from "../../public/expense.png";
 import stopwatch from "../../public/stopwatch.png"
-
+import doctor from '../../public/doctor.png'
 
 
 function Projects() {
   const cardItems = [
+    
     {
       id: 1,
+      logo: doctor,
+      name: "Doctor Appointment Website",
+      demo: "https://doctor-nu-five.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Doctor",
+    },
+    {
+      id: 2,
+      logo: doctor,
+      name: "Doctor Appointment website Admin Panel",
+      demo: "https://doctor-qev4.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Doctor",
+    },
+    {
+      id: 3,
+      logo: delivery,
+      name: "Food Delivery user Panel",
+      demo: "https://food-delivery-nrha.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-delivery",
+    },    {
+      id: 4,
+      logo: delivery,
+      name: "Food Delivery admin panel",
+      demo: "https://food-delivery-sooty-three.vercel.app/",
+      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-delivery",
+    }, 
+    {
+      id: 5,
       logo: weather,
       name: "Weather Using React",
       demo: "https://weather-using-react-gamma.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Weather-using-react",
     },
     {
-      id: 2,
+      id: 6,
       logo: temperature,
       name: "Temperature Convertor",
       demo: "https://tempconvert-plum.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/tempconvert",
     },
     {
-      id: 3,
+      id: 7,
       logo: calculator,
       name: "Calculator",
       demo: "https://calculator-indol-phi-13.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/calculator",
     },
     {
-      id: 4,
+      id: 8,
       logo: alarm,
       name: "Alarm",
       demo: "https://alarm-theta.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Alarm",
     },
     {
-      id: 5,
+      id: 9,
       logo: educational,
       name: "Online Education Website",
       demo: "https://educational-jet.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/educational",
     },
     {
-      id: 6,
+      id: 10,
       logo: random,
       name: "Random Image Generator",
       demo: "https://random-image-xi.vercel.app/",
@@ -61,21 +89,21 @@ function Projects() {
     },
     
     {
-      id: 7,
+      id: 11,
       logo: food,
       name: "Food ordering site",
       demo: "https://food-junction.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-junction",
     },
     {
-      id: 8,
+      id: 12,
       logo: qr,
       name: "QR code Generator",
       demo: "https://qr-code-generatorbyudi.tiiny.site/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/QR-code-generator",
     },
     {
-      id: 9,
+      id: 13,
       logo: text,
       name: "Text 2 Speech Convertor",
       demo: "https://texttospeech-xi.vercel.app/",
@@ -83,33 +111,20 @@ function Projects() {
     },
     
     {
-      id: 10,
+      id: 14,
       logo: greeting,
       name: "greeting",
       demo: "https://greet-tan.vercel.app/",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/greet",
-    },
-    {
-      id: 11,
-      logo: delivery,
-      name: "Food Delivery user Panel",
-      demo: "https://food-delivery-nrha.vercel.app/",
-      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-delivery",
-    },    {
-      id: 12,
-      logo: delivery,
-      name: "Food Delivery admin panel",
-      demo: "https://food-delivery-sooty-three.vercel.app/",
-      sourceCodeLink: "https://github.com/UDITNARYANSAXENA/Food-delivery",
-    },    {
-      id: 13,
+    },   {
+      id: 15,
       logo: expense,
       name: "Expense-Maneger",
       demo: "https://expense-manager-eta-two.vercel.app/login",
       sourceCodeLink: "https://github.com/UDITNARYANSAXENA/expense-manager",
     },
     {
-      id: 14,
+      id: 16,
       logo: stopwatch,
       name: "Stop Watch",
       demo: "https://stop-watch-beta-two.vercel.app/",
