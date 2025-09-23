@@ -8,10 +8,13 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Udit Narayan Saxena </span>
+            Hi Everyone, I am{" "}
+            <span className="purple">Udit Narayan Saxena </span>
             from <span className="purple"> Noida, Uttar Pradesh , India.</span>
             <br />
-            I am currently B.Tech Graduate from Dr. A.P.J. Abdul Kalam Technical University , Lucknow.
+            I am currently working as Web Developer at Easrise Legalpaper
+            Management (OPC) Pvt. Ltd. From September 2025 , I completed my
+            B.Tech from Dr. A.P.J. Abdul Kalam Technical University , Lucknow.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
