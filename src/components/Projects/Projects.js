@@ -28,7 +28,9 @@ function Projects() {
             <ProjectCard
               isBlog={false}
               title="Student Teacher Portal"
-              description="This project is a simple educational platform designed to enhance interaction between teachers and students. It allows teachers to share their content and resources, while students can easily access them in one place. The main goal is to make learning more easy, organized, and accessible. Overall, it serves as a basic educational web project created for practice and demonstration purposes."
+              description="This project is a simple educational platform designed to enhance interaction and communication between teachers and students. The platform provides a centralized space where teachers can share learning materials, notes, assignments, and other educational resources, while students can easily access and engage with them in an organized and user-friendly environment.
+
+              The main goal of the system is to make learning more accessible, interactive, and efficient, especially in online and blended learning contexts. It aims to simplify the teaching process for educators and provide students with a structured way to manage their learning content."
               ghLink="https://github.com/UDITNARYANSAXENA/teacher-student"
               demoLink="https://teacher-student-wheat.vercel.app/"
             />
