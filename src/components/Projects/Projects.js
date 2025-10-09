@@ -27,12 +27,22 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
+              title="Student Teacher Portal"
+              description="This project is a simple educational platform designed to enhance interaction between teachers and students. It allows teachers to share their content and resources, while students can easily access them in one place. The main goal is to make learning more easy, organized, and accessible. Overall, it serves as a basic educational web project created for practice and demonstration purposes."
+              ghLink="https://github.com/UDITNARYANSAXENA/teacher-student"
+              demoLink="https://teacher-student-wheat.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
               title="Foodie - Food Delivery"
               description="The Food Delivery Application is a full-stack web platform designed to simplify the process of ordering food online. Users can browse a wide range of restaurants, explore menus, add items to their cart, and place orders with secure online payment. The application includes user authentication using JWT, ensuring a safe and personalized experience. A dynamic cart and order history system helps users manage their purchases efficiently. Admins have access to a dedicated dashboard where they can manage restaurants, menus, user accounts, and order statuses. The frontend is built using React.js and Tailwind CSS for a responsive and modern UI, while the backend leverages Node.js, Express.js, and MongoDB for robust data handling."
               ghLink="https://github.com/UDITNARYANSAXENA/Food-delivery"
               demoLink="https://food-delivery-nrha.vercel.app/"
             />
-          </Col><Col md={4} className="project-card">
+          </Col>
+          <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
               title="Joblio - Job Portal"
@@ -58,17 +68,15 @@ function Projects() {
               description="The One-to-One Chat Application is a real-time messaging platform that enables secure and seamless private conversations between two users. It features user authentication, instant message delivery, chat history management, and online/offline status indicators. Messages are exchanged in real-time using Socket.io, ensuring a smooth and responsive chat experience. The application is built with React.js on the frontend and Node.js with Express.js on the backend, using MongoDB for storing user data and chat records. The clean and responsive UI ensures usability across all devices, making it ideal for personal or professional direct messaging"
               ghLink="https://github.com/UDITNARYANSAXENA/CHAT-APP"
             />
-          </Col><Col md={4} className="project-card">
+          </Col>
+          <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
               title="Todo App Using Native"
               description="The To-Do Application is a mobile productivity app developed using React Native, designed to help users manage daily tasks efficiently on both Android and iOS devices. Users can add, edit, delete, and mark tasks as complete in a simple and intuitive interface. The app supports local state management for offline functionality and provides a smooth, native-like user experience across platforms. With features like due dates, task prioritization, and persistent storage using AsyncStorage or a local database, the app ensures that users stay organized on the go. The clean UI and responsive design make it a reliable tool for personal task tracking."
               ghLink="https://github.com/UDITNARYANSAXENA/TODO-using-React-Native"
-              
             />
           </Col>
-          
-
         </Row>
       </Container>
     </Container>
