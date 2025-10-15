@@ -12,7 +12,7 @@ function AboutCard() {
             <span className="purple">Udit Narayan Saxena </span>
             from <span className="purple"> Noida, Uttar Pradesh , India.</span>
             <br />
-            I am currently working as Web Developer at Easrise Legalpaper
+            I am currently working as <span className="purple"> Web Developer </span> at Easrise Legalpaper
             Management (OPC) Pvt. Ltd. From September 2025 , I completed my
             B.Tech from Dr. A.P.J. Abdul Kalam Technical University , Lucknow.
             <br />
