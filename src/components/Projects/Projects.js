@@ -62,6 +62,24 @@ function Projects() {
               demoLink="https://expense-manager-eta-two.vercel.app/signup"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Student's Assignment"
+              description="Our website serves as an interactive bridge between teachers and students, making the assignment process efficient, organized, and easy to manage. Teachers can create and assign tasks either to the entire class or to selected students based on need or learning level. Each assignment includes clear instructions, deadlines, and the required materials, ensuring that students always know exactly what is expected.Students can easily access their assigned tasks, track deadlines, and submit their work directly through the platform. Once submitted, assignments are stored securely and are accessible to teachers for review and grading. The platform also supports real-time updates and notifications, helping both teachers and students stay on track."
+              ghLink="https://github.com/UDITNARYANSAXENA/teacher-student"
+              demoLink="https://teacher-student-wheat.vercel.app/login"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Moonlight Vision - Software Company "
+              description="Welcome to our software company’s official website—your gateway to innovative digital solutions. We specialize in designing and developing cutting-edge software that helps businesses simplify operations, improve efficiency, and unlock new opportunities for growth. With a strong focus on reliability, performance, and user-friendly design, our products are built to meet the evolving needs of modern organizations.Our team of skilled developers, designers, and technology experts works closely with clients to understand their goals and deliver customized solutions that truly make an impact. From web and mobile applications to enterprise systems and cloud-based platforms, we are committed to providing technology that empowers businesses to stay ahead in a fast-changing digital world."
+              ghLink="https://github.com/UDITNARYANSAXENA/MoonlightVision"
+              demoLink="https://moonlight-vision.vercel.app/"
+            />
+          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
