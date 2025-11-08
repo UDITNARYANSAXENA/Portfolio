@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
 
 const nav = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact']
 
@@ -21,31 +20,10 @@ export default function Header() {
     >
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         <motion.div whileHover={{ scale: 1.05 }}>
-          <h1 className="text-2xl md:text-3xl gradient-text">Udit</h1>
+          <h1 className="text-2xl md:text-3xl gradient-text">Udit Narayan Saxena</h1>
         </motion.div>
-
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
-          {nav.map((i) => (
-            <li key={i}>
-              <button onClick={() => scrollTo(i)} className="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">
-                {i}
-              </button>
-            </li>
-          ))}
-          <ThemeToggle />
-        </ul>
-
-        {/* Mobile */}
-        <div className="flex items-center gap-3 md:hidden">
-          <ThemeToggle />
-          <button onClick={() => setOpen(!open)} className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800">
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
         <motion.div
           initial={{ opacity: 0, x: 100 }}

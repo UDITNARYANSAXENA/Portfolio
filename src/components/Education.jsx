@@ -14,24 +14,24 @@ const education = [
   },
   {
     degree: "Intermediate (12th) - PCM",
-    institution: "Jawahar Navodaya Vidyalaya, Varanasi",
+    institution: "Saraswati Vidya Mandir , Etah",
     period: "2020 – 2021",
-    percentage: "94.2%",
+    percentage: "86.4%",
     icon: <Award className="w-6 h-6" />,
     highlights: [
-      "Scored 99/100 in Mathematics",
-      "Top 1% in district (UP Board)"
+      "Scored 86.4% In PCM",
+      "Top 5% in district (CBSE Board)"
     ]
   },
   {
     degree: "High School (10th)",
-    institution: "Jawahar Navodaya Vidyalaya, Varanasi",
+    institution: "Saraswati Vidya Mandir , Etah",
     period: "2018 – 2019",
-    percentage: "95.6%",
+    percentage: "91.6%",
     icon: <School className="w-6 h-6" />,
     highlights: [
-      "School Topper in Science & Mathematics",
-      "NTSE Scholar (Stage 1 Qualified)"
+      "Represent School in Various Competitions",
+      "Scored 91.6% (CBSE Board)"
     ]
   }
 ]

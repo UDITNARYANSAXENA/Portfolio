@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,24 +10,7 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 
 function App() {
-  const [theme, setTheme] = useState('light')
   const [mobileMenu, setMobileMenu] = useState(false)
-
-  // ----- Theme Controller -----
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const init = saved || (prefersDark ? 'dark' : 'light')
-    setTheme(init)
-    document.documentElement.classList.toggle('dark', init === 'dark')
-  }, [])
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-    document.documentElement.classList.toggle('dark', newTheme === 'dark')
-  }
 
   // ----- Smooth Scroll -----
   const scrollTo = (id) => {
@@ -64,28 +47,10 @@ function App() {
                 </button>
               </motion.li>
             ))}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={toggleTheme}
-              className="p-2.5 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-md shadow-lg"
-            >
-              <motion.div animate={{ rotate: theme === 'dark' ? 180 : 0 }}>
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-              </motion.div>
-            </motion.button>
           </ul>
 
           {/* Mobile */}
           <div className="flex items-center gap-3 md:hidden">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-white/20 dark:bg-black/20"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </motion.button>
             <button onClick={() => setMobileMenu(!mobileMenu)}>
               {mobileMenu ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -126,7 +91,7 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+      <footer className="py-8 text-center text-sm text-gray-500">
         © 2025 Udit Narayan Saxena. All rights reserved.
       </footer>
     </>

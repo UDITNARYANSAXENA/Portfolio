@@ -20,6 +20,27 @@ const experiences = [
       "Reduced API latency and improved app performance through optimized state management.",
       "Implemented CI/CD pipelines using GitHub Actions to streamline deployment."
     ]
+  },
+  {
+    role: "Web Developer Intern",
+    company: "Oasis Infobyte, Remote",
+    period: "Aug 2023 – Sep 2023",
+    points: [
+      "Developed admin dashboards and data visualization modules using React.js and Redux Toolkit.",
+      "Reduced API latency and improved app performance through optimized state management.",
+      "Implemented CI/CD pipelines using GitHub Actions to streamline deployment."
+    ]
+  },
+  
+  {
+    role: "Web Developer Trainee",
+    company: "CRIS Railway , Delhi",
+    period: "Sept 2023 – Nov 2023",
+    points: [
+      "Developed admin dashboards and data visualization modules using React.js and Redux Toolkit.",
+      "Reduced API latency and improved app performance through optimized state management.",
+      "Implemented CI/CD pipelines using GitHub Actions to streamline deployment."
+    ]
   }
 ]
 

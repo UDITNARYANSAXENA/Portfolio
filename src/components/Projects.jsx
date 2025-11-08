@@ -6,35 +6,35 @@ const projects = [
     name: "Job Portal (Joblio)",
     tech: "React, Redux, Supabase, FastAPI",
     desc: "Recruiter-candidate portal with drag-and-drop job management and analytics dashboard.",
-    github: "https://github.com/UDITNARYANSAXENA/joblio",
+    github: "https://github.com/UDITNARYANSAXENA/Job-Portal",
     demo: "https://joblio.udit.dev"
   },
   {
     name: "Food Delivery App",
     tech: "MERN, Socket.io, Razorpay",
     desc: "Real-time order tracking with WebSockets. Integrated Razorpay for 50+ daily transactions.",
-    github: "https://github.com/UDITNARYANSAXENA/food-delivery-mern",
+    github: "https://github.com/UDITNARYANSAXENA/Food-delivery",
     demo: "https://food.udit.dev"
   },
   {
     name: "Doctor Appointment System (Prescripto)",
     tech: "MERN, Razorpay, JWT",
     desc: "Role-based platform for doctors, patients, and admins with automated SMS/email notifications.",
-    github: "https://github.com/UDITNARYANSAXENA/prescripto",
+    github: "https://github.com/UDITNARYANSAXENA/Doctor",
     demo: "https://prescripto.udit.dev"
   },
   {
     name: "Student Assignment Platform",
     tech: "React, Node.js, MongoDB",
     desc: "Assignment submission & grading system with role-based access. Deployed on Vercel + Render.",
-    github: "https://github.com/UDITNARYANSAXENA/assignment-portal",
+    github: "https://github.com/UDITNARYANSAXENA/teacher-student",
     demo: "https://assignment.udit.dev"
   },
   {
-    name: "Real Estate App (Moonlight Vision)",
+    name: "Moonlight Vision Software Technologies",
     tech: "MERN, Cloudinary",
     desc: "Property listing with image uploads, filters, and inquiry forms. Fully responsive.",
-    github: "https://github.com/UDITNARYANSAXENA/moonlight-vision",
+    github: "https://github.com/UDITNARYANSAXENA/MoonlightVision",
     demo: "https://moonlight.udit.dev"
   }
 ]
