@@ -24,7 +24,7 @@ const projects = [
     demo: "https://teacher-student-wheat.vercel.app/login"
   },
   {
-    name: "Moonlight Vision Software Technologies",
+    name: "Moonlight Vision Software Technologies (Freelance Project)",
     tech: "MERN, Cloudinary",
     desc: "Property listing with image uploads, filters, and inquiry forms. Fully responsive.",
     github: "https://github.com/UDITNARYANSAXENA/MoonlightVision",
