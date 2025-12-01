@@ -21,7 +21,7 @@ const projects = [
     tech: "React, Node.js, MongoDB",
     desc: "Assignment submission & grading system with role-based access. Deployed on Vercel + Render.",
     github: "https://github.com/UDITNARYANSAXENA/teacher-student",
-    demo: "https://teacher-student-wheat.vercel.app/login"
+    demo: "https://teacher-student-wheat.vercel.app/"
   },
   {
     name: "Moonlight Vision Software Technologies (Freelance Project)",
