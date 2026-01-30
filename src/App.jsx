@@ -12,7 +12,6 @@ import Contact from './components/Contact'
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false)
 
-  // ----- Smooth Scroll -----
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     setMobileMenu(false)
