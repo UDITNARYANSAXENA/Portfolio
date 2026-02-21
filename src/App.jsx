@@ -15,8 +15,8 @@ const navItems = [
   { name: 'About',      id: 'about' },
   { name: 'Skills',     id: 'skills' },
   { name: 'Experience', id: 'experience' },
-  { name: 'Academic Projects',   id: 'academic-projects' },
-  { name: 'Professional Projects',   id: 'professional-projects' },
+  { name: 'Academic Work',   id: 'academic-projects' },
+  { name: 'Professional Experience',   id: 'professional-projects' },
   { name: 'Education',  id: 'education' },
   { name: 'Contact',    id: 'contact' },
 ]
