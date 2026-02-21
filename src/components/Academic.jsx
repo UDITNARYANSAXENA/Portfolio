@@ -1,28 +1,38 @@
-// components/ProfessionalProjects.jsx
+// components/PersonalProjects.jsx
 import { motion } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { Github, ExternalLink } from 'lucide-react'
 
-const professionalProjects = [
+const personalProjects = [
   {
-    name: "Dhruvi Incense India",
-    tech: ["MERN Stack", "Razorpay", "Admin Dashboard", "Inventory Mgmt"],
-    desc: "Full-featured e-commerce platform with product catalog, secure payments, order tracking, and analytics dashboard for business owners.",
-    demo: "https://dhruviincenseindia.com/",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // replace with real screenshot
+    name: "Joblio – Job Portal",
+    tech: ["React", "Redux", "Supabase", "FastAPI", "Tailwind"],
+    desc: "Full-featured job platform connecting recruiters and candidates with application tracking, analytics, and secure auth flows.",
+    github: "https://github.com/UDITNARYANSAXENA/Job-Portal",
+    demo: "https://job-portal-mauve-five.vercel.app/",
+    image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Siriamrutha Sweets",
-    tech: ["React", "Node.js", "Tailwind", "Responsive Design"],
-    desc: "High-performance business website for a premium sweets brand — fast loading, elegant design, mobile-first approach.",
-    demo: "https://sriamruthasweets.com/",
-    image: "https://images.unsplash.com/photo-1558312657-b2dead03d494?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // replace
+    name: "Prescripto – Doctor Appointment",
+    tech: ["MERN", "Razorpay", "JWT", "Socket.io"],
+    desc: "Role-based doctor appointment booking system with payment integration, notifications, and appointment management.",
+    github: "https://github.com/UDITNARYANSAXENA/Doctor",
+    demo: "https://doctor-nu-five.vercel.app/",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "EduConnect – Student–Teacher Platform",
+    tech: ["React", "Node.js", "MongoDB", "JWT Auth"],
+    desc: "Secure academic interaction platform with role-based access, messaging, and resource sharing between students and teachers.",
+    github: "https://github.com/UDITNARYANSAXENA/teacher-student",
+    demo: "https://teacher-student-wheat.vercel.app/",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
 ]
 
-export default function ProfessionalProjects() {
+export default function PersonalProjects() {
   return (
     <section
-      id="professional-projects"
+      id="projects"
       className="
         relative py-20 sm:py-28 lg:py-36
         px-5 sm:px-8 lg:px-12 xl:px-16
@@ -30,10 +40,9 @@ export default function ProfessionalProjects() {
         overflow-hidden
       "
     >
-      {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-indigo-600/6 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-violet-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -49,18 +58,18 @@ export default function ProfessionalProjects() {
             bg-clip-text text-transparent
           "
         >
-          Professional Work
+          Personal Projects
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-7 md:gap-9 lg:gap-12">
-          {professionalProjects.map((project, idx) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-9 lg:gap-12">
+          {personalProjects.map((project, idx) => (
             <motion.div
               key={project.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: idx * 0.2 }}
-              whileHover={{ y: -12, scale: 1.02 }}
+              transition={{ duration: 0.8, delay: idx * 0.15 }}
+              whileHover={{ y: -12, scale: 1.03 }}
               className="
                 group relative
                 bg-gradient-to-b from-slate-900/70 to-slate-950/80
@@ -70,7 +79,6 @@ export default function ProfessionalProjects() {
                 transition-all duration-500
               "
             >
-              {/* Project thumbnail */}
               <div className="relative h-48 sm:h-56 overflow-hidden">
                 <img
                   src={project.image}
@@ -104,18 +112,33 @@ export default function ProfessionalProjects() {
                   {project.desc}
                 </p>
 
-                <div className="flex gap-5">
+                <div className="flex gap-4 flex-wrap">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      inline-flex items-center gap-2 px-5 py-2.5
+                      bg-slate-800 hover:bg-slate-700
+                      text-white font-medium rounded-lg
+                      transition-all duration-300 border border-slate-600
+                    "
+                  >
+                    <Github size={18} />
+                    Source
+                  </a>
+
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
                       inline-flex items-center gap-2 px-5 py-2.5
-                      bg-gradient-to-r from-emerald-600/90 to-teal-600/90
-                      hover:from-emerald-500 hover:to-teal-500
+                      bg-gradient-to-r from-indigo-600/90 to-violet-600/90
+                      hover:from-indigo-500 hover:to-violet-500
                       text-white font-medium rounded-lg
-                      transition-all duration-300 shadow-md shadow-emerald-900/30
-                      hover:shadow-lg hover:shadow-emerald-700/40
+                      transition-all duration-300 shadow-md shadow-indigo-900/30
+                      hover:shadow-lg hover:shadow-indigo-700/40
                     "
                   >
                     <ExternalLink size={18} />
