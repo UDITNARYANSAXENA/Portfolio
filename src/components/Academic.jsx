@@ -1,7 +1,7 @@
 // components/PersonalProjects.jsx
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
-import joblio from "../asset/joblio.png"
+import joblio from "../asset/Joblio.png"
 import prescripto from "../asset/Doctor.png"
 import educonnect from "../asset/Student.png"
 import evently from "../asset/Evently.png"
