@@ -13,7 +13,7 @@ const professionalProjects = [
     image: dhruvi, // replace with real screenshot
   },
   {
-    name: "Siriamrutha Sweets",
+    name: "Siriamrutha Food",
     tech: ["React", "Node.js", "Tailwind", "Responsive Design"],
     desc: "High-performance business website for a premium sweets brand — fast loading, elegant design, mobile-first approach.",
     demo: "https://sriamruthasweets.com/",
