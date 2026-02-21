@@ -1,6 +1,8 @@
 // components/ProfessionalProjects.jsx
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
+import dhruvi from "../asset/dhruvi.png"
+import siri from "../asset/siri.png"
 
 const professionalProjects = [
   {
@@ -8,14 +10,14 @@ const professionalProjects = [
     tech: ["MERN Stack", "Razorpay", "Admin Dashboard", "Inventory Mgmt"],
     desc: "Full-featured e-commerce platform with product catalog, secure payments, order tracking, and analytics dashboard for business owners.",
     demo: "https://dhruviincenseindia.com/",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // replace with real screenshot
+    image: dhruvi, // replace with real screenshot
   },
   {
     name: "Siriamrutha Sweets",
     tech: ["React", "Node.js", "Tailwind", "Responsive Design"],
     desc: "High-performance business website for a premium sweets brand — fast loading, elegant design, mobile-first approach.",
     demo: "https://sriamruthasweets.com/",
-    image: "https://images.unsplash.com/photo-1558312657-b2dead03d494?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // replace
+    image: siri, // replace
   },
 ]
 

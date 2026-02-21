@@ -7,7 +7,7 @@ const experiences = [
     role: "Web Developer",
     company: "Easrise Legal Papers India",
     period: "Sep 2025 – Present",
-    location: "Remote / Delhi",
+    location: "Noida, India",
     points: [
       "Designed and developed responsive client management platforms using React.js, Tailwind CSS, and Node.js",
       "Integrated secure RESTful APIs and optimized MongoDB queries → improved response time & scalability",
