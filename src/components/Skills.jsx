@@ -1,4 +1,4 @@
-// components/Skills.jsx
+// components/Skills.jsx - Updated for light/dark
 import { motion } from 'framer-motion'
 import {
   Code2,
@@ -70,9 +70,8 @@ export default function Skills() {
     <section
       id="skills"
       className="
-        relative py-20 sm:py-28 lg:py-36
-        px-5 sm:px-8 lg:px-12 xl:px-16
-        bg-gradient-to-b from-slate-950 via-indigo-950/30 to-slate-950
+        relative section-padding
+        bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:via-indigo-950/30 dark:to-slate-950
         overflow-hidden
       "
     >
@@ -82,7 +81,7 @@ export default function Skills() {
         <div className="absolute -bottom-32 -left-40 w-[600px] h-[600px] bg-purple-700/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 container-tight">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,9 +89,7 @@ export default function Skills() {
           transition={{ duration: 1 }}
           className="
             text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-            font-extrabold tracking-tight text-center mb-16 md:mb-20
-            bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500
-            bg-clip-text text-transparent
+            font-extrabold tracking-tight text-center mb-16 md:mb-20 gradient-text
           "
         >
           Technical Skills
@@ -107,15 +104,7 @@ export default function Skills() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.9, delay: catIdx * 0.14 }}
               whileHover={{ y: -10, scale: 1.03 }}
-              className="
-                group relative
-                bg-gradient-to-b from-slate-900/70 to-slate-950/80
-                backdrop-blur-xl border border-slate-700/40
-                rounded-2xl md:rounded-3xl p-6 md:p-8
-                shadow-xl shadow-black/40
-                hover:shadow-2xl hover:shadow-indigo-900/30
-                transition-all duration-500
-              "
+              className="group relative glass-strong p-6 md:p-8"
             >
               {/* Subtle gradient overlay on hover */}
               <div
@@ -132,12 +121,12 @@ export default function Skills() {
                 <div
                   className={`
                     p-3.5 rounded-2xl bg-gradient-to-br ${category.gradient}
-                    bg-opacity-20 text-white shadow-lg
+                    bg-opacity-20 text-gray-900 dark:text-white shadow-lg
                   `}
                 >
                   {category.icon}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+                <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
                   {category.title}
                 </h3>
               </div>
@@ -154,10 +143,8 @@ export default function Skills() {
                     className="flex items-center justify-between group/skill"
                   >
                     <div className="flex items-center gap-3">
-                      <div
-                        className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${category.gradient}`}
-                      />
-                      <span className="text-slate-200 font-medium text-base md:text-lg group-hover/skill:text-white transition-colors">
+                      <div className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${category.gradient}`} />
+                      <span className="text-gray-800 dark:text-slate-200 font-medium text-base md:text-lg group-hover/skill:text-gray-900 dark:group-hover/skill:text-white transition-colors">
                         {skill.name}
                       </span>
                     </div>
@@ -171,7 +158,7 @@ export default function Skills() {
                           cy="50"
                           r="42"
                           fill="none"
-                          stroke="rgba(255,255,255,0.07)"
+                          stroke="rgba(0,0,0,0.07) dark:stroke(rgba(255,255,255,0.07)"
                           strokeWidth="10"
                         />
                         {/* Animated progress */}
@@ -201,7 +188,7 @@ export default function Skills() {
                         </defs>
                       </svg>
 
-                      <div className="absolute inset-0 flex items-center justify-center text-sm md:text-base font-bold text-slate-300">
+                      <div className="absolute inset-0 flex items-center justify-center text-sm md:text-base font-bold text-gray-600 dark:text-slate-300">
                         {skill.level}%
                       </div>
                     </div>
@@ -216,7 +203,7 @@ export default function Skills() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.7 }}
           transition={{ delay: 1.4, duration: 1 }}
-          className="text-center text-slate-500 mt-16 md:mt-20 text-sm md:text-base"
+          className="text-center text-gray-500 dark:text-slate-500 mt-16 md:mt-20 text-sm md:text-base"
         >
           Percentages reflect self-assessed proficiency and real-world production usage
         </motion.p>

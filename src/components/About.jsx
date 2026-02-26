@@ -1,4 +1,4 @@
-// components/About.jsx
+// components/About.jsx - Updated for light/dark
 import { motion } from 'framer-motion'
 
 const highlights = [
@@ -21,9 +21,8 @@ export default function About() {
     <section
       id="about"
       className={`
-        relative py-20 sm:py-24 lg:py-32 
-        px-5 sm:px-8 lg:px-12 xl:px-16
-        bg-gradient-to-b from-slate-950 via-indigo-950/20 to-slate-950
+        relative section-padding 
+        bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:via-indigo-950/20 dark:to-slate-950
         overflow-hidden
       `}
     >
@@ -33,7 +32,7 @@ export default function About() {
         <div className="absolute bottom-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-violet-600/5 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 container-tight">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,9 +44,7 @@ export default function About() {
           <h2
             className={`
               text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-              font-extrabold tracking-tight
-              bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500 
-              bg-clip-text text-transparent
+              font-extrabold tracking-tight gradient-text
             `}
           >
             About Me
@@ -61,26 +58,26 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-8 space-y-7 sm:space-y-8 md:space-y-9 text-base sm:text-lg lg:text-xl leading-relaxed text-slate-300"
+            className="lg:col-span-8 space-y-7 sm:space-y-8 md:space-y-9 text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-slate-300"
           >
             <p>
-              I'm a <span className="font-semibold text-white">passionate Full-Stack MERN Developer</span> focused on crafting fast, scalable, and delightful web applications.
+              I'm a <span className="font-semibold text-gray-900 dark:text-white">passionate Full-Stack MERN Developer</span> focused on crafting fast, scalable, and delightful web applications.
             </p>
 
             <p>
-              I work daily with <strong className="text-indigo-300">React, Next.js, TypeScript, Node.js, Express, MongoDB, Tailwind</strong>, and love building clean, maintainable codebases — from beautiful pixel-perfect UIs to secure, performant APIs and payment integrations (Razorpay, Stripe mindset).
+              I work daily with <strong className="text-indigo-700 dark:text-indigo-300">React, Next.js, TypeScript, Node.js, Express, MongoDB, Tailwind</strong>, and love building clean, maintainable codebases — from beautiful pixel-perfect UIs to secure, performant APIs and payment integrations (Razorpay, Stripe mindset).
             </p>
 
             <p>
-              Deeply care about <span className="font-medium text-slate-200">performance</span>, <span className="font-medium text-slate-200">accessibility</span>, <span className="font-medium text-slate-200">developer experience</span>, and <span className="font-medium text-slate-200">exceptional UX</span>. Whether it's reducing bundle size, implementing proper hydration, lazy-loading, or creating intuitive flows — I aim to deliver real value.
+              Deeply care about <span className="font-medium text-gray-800 dark:text-slate-200">performance</span>, <span className="font-medium text-gray-800 dark:text-slate-200">accessibility</span>, <span className="font-medium text-gray-800 dark:text-slate-200">developer experience</span>, and <span className="font-medium text-gray-800 dark:text-slate-200">exceptional UX</span>. Whether it's reducing bundle size, implementing proper hydration, lazy-loading, or creating intuitive flows — I aim to deliver real value.
             </p>
 
-            <p className="pt-3 text-lg sm:text-xl font-medium text-slate-200">
-              Currently seeking full-time opportunities in <strong className="text-white">India</strong> — remote, hybrid or on-site. Excited to join a product-oriented team where I can grow, learn fast, and ship meaningful features.
+            <p className="pt-3 text-lg sm:text-xl font-medium text-gray-800 dark:text-slate-200">
+              Currently seeking full-time opportunities in <strong className="text-gray-900 dark:text-white">India</strong> — remote, hybrid or on-site. Excited to join a product-oriented team where I can grow, learn fast, and ship meaningful features.
             </p>
 
             {/* Personal touch */}
-            <div className="pt-6 border-t border-slate-700/50 text-slate-400 italic text-base sm:text-lg">
+            <div className="pt-6 border-t border-gray-300/50 dark:border-slate-700/50 text-gray-600 dark:text-slate-400 italic text-base sm:text-lg">
               <p>
                 Outside of code: black coffee addict • sci-fi & tech enthusiast • occasional guitarist • forever learning.
               </p>
@@ -95,7 +92,7 @@ export default function About() {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="lg:col-span-4 lg:sticky lg:top-24 space-y-10 lg:space-y-12"
           >
-            <h3 className="text-2xl sm:text-3xl font-semibold text-white text-center lg:text-left">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white text-center lg:text-left">
               My Journey
             </h3>
 
@@ -111,19 +108,19 @@ export default function About() {
                     relative pl-10 sm:pl-12 
                     border-l-2 border-indigo-500/30 
                     lg:border-l border-l-0 lg:border-l-2
-                    bg-gradient-to-r from-slate-900/40 to-transparent lg:from-transparent lg:to-transparent
+                    bg-gradient-to-r from-gray-50/40 to-transparent lg:from-transparent lg:to-transparent dark:from-slate-900/40 dark:to-transparent
                     p-5 sm:p-6 lg:p-0 rounded-xl lg:rounded-none
-                    border border-slate-700/40 lg:border-0
+                    border border-gray-300/40 dark:border-slate-700/40 lg:border-0
                   `}
                 >
                   {/* Dot */}
                   <div className="absolute -left-2.5 top-6 w-5 h-5 rounded-full bg-indigo-600 shadow-lg shadow-indigo-900/40 hidden lg:block" />
 
-                  <p className="text-indigo-400/90 font-medium text-sm sm:text-base uppercase tracking-wide mb-2">
+                  <p className="text-indigo-600 dark:text-indigo-400/90 font-medium text-sm sm:text-base uppercase tracking-wide mb-2">
                     {item.year}
                   </p>
 
-                  <p className="text-slate-300 text-base sm:text-lg">
+                  <p className="text-gray-700 dark:text-slate-300 text-base sm:text-lg">
                     {item.text}
                   </p>
                 </motion.div>

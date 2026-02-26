@@ -1,4 +1,4 @@
-// components/PersonalProjects.jsx
+// components/PersonalProjects.jsx - Updated for light/dark
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
 import joblio from "../asset/Joblio.png"
@@ -64,9 +64,8 @@ export default function PersonalProjects() {
     <section
       id="projects"
       className="
-        relative py-20 sm:py-28 lg:py-40
-        px-5 sm:px-8 lg:px-12 xl:px-16
-        bg-gradient-to-b from-slate-950 via-indigo-950/30 to-slate-950
+        relative section-padding
+        bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:via-indigo-950/30 dark:to-slate-950
         overflow-hidden
       "
     >
@@ -76,7 +75,7 @@ export default function PersonalProjects() {
         <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-violet-600/5 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 container-tight">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,9 +83,7 @@ export default function PersonalProjects() {
           transition={{ duration: 1.1 }}
           className="
             text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight
-            text-center mb-16 lg:mb-24
-            bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500
-            bg-clip-text text-transparent
+            text-center mb-16 lg:mb-24 gradient-text
           "
         >
           Personal Projects
@@ -102,11 +99,7 @@ export default function PersonalProjects() {
               transition={{ duration: 0.9, delay: idx * 0.12 }}
               whileHover={{ y: -12, scale: 1.04 }}
               className="
-                group relative
-                bg-gradient-to-br from-slate-900/80 to-slate-950/90
-                backdrop-blur-xl border border-slate-700/50
-                rounded-2xl lg:rounded-3xl overflow-hidden
-                shadow-2xl shadow-black/50
+                group relative glass-strong
                 hover:shadow-indigo-900/40 hover:border-indigo-500/30
                 transition-all duration-500
               "
@@ -140,8 +133,8 @@ export default function PersonalProjects() {
                       key={tech}
                       className="
                         px-3.5 py-1.5 text-xs font-medium rounded-full
-                        bg-indigo-950/70 border border-indigo-500/30 text-indigo-200
-                        group-hover:bg-indigo-900/70 group-hover:border-indigo-400/40
+                        bg-indigo-100/70 dark:bg-indigo-950/70 border border-indigo-300/30 dark:border-indigo-500/30 text-indigo-700 dark:text-indigo-200
+                        group-hover:bg-indigo-200/70 dark:group-hover:bg-indigo-900/70 group-hover:border-indigo-400/40
                         transition-all duration-300
                       "
                     >
@@ -151,7 +144,7 @@ export default function PersonalProjects() {
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-300 leading-relaxed mb-7 lg:mb-8 text-base lg:text-lg line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
+                <p className="text-gray-700 dark:text-slate-300 leading-relaxed mb-7 lg:mb-8 text-base lg:text-lg line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
                   {project.desc}
                 </p>
 
@@ -161,13 +154,7 @@ export default function PersonalProjects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="
-                      inline-flex items-center gap-2.5 px-6 py-3
-                      bg-slate-800/80 hover:bg-slate-700/80
-                      border border-slate-600 hover:border-slate-500
-                      text-white font-medium rounded-xl
-                      transition-all duration-300 shadow-md hover:shadow-lg
-                    "
+                    className="btn-secondary"
                   >
                     <Github size={20} />
                     Source Code
@@ -177,14 +164,7 @@ export default function PersonalProjects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="
-                      inline-flex items-center gap-2.5 px-6 py-3
-                      bg-gradient-to-r from-indigo-600/90 to-violet-600/90
-                      hover:from-indigo-500 hover:to-violet-500
-                      text-white font-medium rounded-xl
-                      shadow-lg shadow-indigo-900/40 hover:shadow-indigo-700/50
-                      transition-all duration-300
-                    "
+                    className="btn-primary"
                   >
                     <ExternalLink size={20} />
                     Live Demo

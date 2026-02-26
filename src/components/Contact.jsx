@@ -1,5 +1,5 @@
-// components/Contact.jsx
-import { useState, useEffect } from 'react'
+// components/Contact.jsx - Updated for light/dark
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Mail, Phone, MapPin, Github, Linkedin, Send, 
@@ -47,9 +47,8 @@ export default function Contact() {
     <section
       id="contact"
       className="
-        relative py-20 sm:py-28 lg:py-40
-        px-5 sm:px-8 lg:px-12 xl:px-16
-        bg-gradient-to-b from-slate-950 via-indigo-950/40 to-slate-950
+        relative section-padding
+        bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:via-indigo-950/40 dark:to-slate-950
         overflow-hidden
       "
     >
@@ -59,7 +58,7 @@ export default function Contact() {
         <div className="absolute bottom-0 -right-20 w-[700px] h-[700px] bg-violet-600/6 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 container-tight">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,8 +66,7 @@ export default function Contact() {
           transition={{ duration: 1.1 }}
           className="
             text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight
-            text-center mb-20 bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500
-            bg-clip-text text-transparent
+            text-center mb-20 gradient-text
           "
         >
           Let's Connect
@@ -82,15 +80,11 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
             className="
-              lg:col-span-5
-              bg-gradient-to-br from-slate-900/80 to-slate-950/80
-              backdrop-blur-2xl border border-slate-700/50
-              rounded-2xl lg:rounded-3xl p-8 lg:p-10
-              shadow-2xl shadow-black/50
+              lg:col-span-5 glass-strong p-8 lg:p-10
               hover:shadow-indigo-900/30 transition-all duration-500
             "
           >
-            <h3 className="text-3xl font-bold text-white mb-10 text-center lg:text-left">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center lg:text-left">
               Get in Touch
             </h3>
 
@@ -100,15 +94,15 @@ export default function Contact() {
                 href="mailto:udit9407@gmail.com"
                 className="
                   group flex items-center gap-5 p-5 rounded-2xl
-                  hover:bg-white/5 transition-all duration-300
+                  hover:bg-gray-100/50 dark:hover:bg-white/5 transition-all duration-300
                 "
               >
-                <div className="p-4 rounded-2xl bg-indigo-600/25 text-indigo-300 group-hover:bg-indigo-600/40 transition-colors">
+                <div className="p-4 rounded-2xl bg-indigo-100/25 dark:bg-indigo-600/25 text-indigo-700 dark:text-indigo-300 group-hover:bg-indigo-200/40 dark:group-hover:bg-indigo-600/40 transition-colors">
                   <Mail size={28} />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-400 mb-0.5">Email</p>
-                  <p className="text-lg font-medium text-white group-hover:text-indigo-300 transition-colors">
+                  <p className="text-sm text-gray-600 dark:text-slate-400 mb-0.5">Email</p>
+                  <p className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors">
                     udit9407@gmail.com
                   </p>
                 </div>
@@ -119,26 +113,26 @@ export default function Contact() {
                 href="tel:+917505266931"
                 className="
                   group flex items-center gap-5 p-5 rounded-2xl
-                  hover:bg-white/5 transition-all duration-300
+                  hover:bg-gray-100/50 dark:hover:bg-white/5 transition-all duration-300
                 "
               >
-                <div className="p-4 rounded-2xl bg-indigo-600/25 text-indigo-300">
+                <div className="p-4 rounded-2xl bg-indigo-100/25 dark:bg-indigo-600/25 text-indigo-700 dark:text-indigo-300">
                   <Phone size={28} />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-400 mb-0.5">Phone</p>
-                  <p className="text-lg font-medium text-white">+91 75052 66931</p>
+                  <p className="text-sm text-gray-600 dark:text-slate-400 mb-0.5">Phone</p>
+                  <p className="text-lg font-medium text-gray-900 dark:text-white">+91 75052 66931</p>
                 </div>
               </a>
 
               {/* Location */}
-              <div className="flex items-center gap-5 p-5 rounded-2xl hover:bg-white/5 transition-all duration-300">
-                <div className="p-4 rounded-2xl bg-indigo-600/25 text-indigo-300">
+              <div className="flex items-center gap-5 p-5 rounded-2xl hover:bg-gray-100/50 dark:hover:bg-white/5 transition-all duration-300">
+                <div className="p-4 rounded-2xl bg-indigo-100/25 dark:bg-indigo-600/25 text-indigo-700 dark:text-indigo-300">
                   <MapPin size={28} />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-400 mb-0.5">Location</p>
-                  <p className="text-lg font-medium text-white">Noida, Uttar Pradesh, India</p>
+                  <p className="text-sm text-gray-600 dark:text-slate-400 mb-0.5">Location</p>
+                  <p className="text-lg font-medium text-gray-900 dark:text-white">Noida, Uttar Pradesh, India</p>
                 </div>
               </div>
             </div>
@@ -149,13 +143,7 @@ export default function Contact() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  flex items-center gap-3 px-6 py-3 rounded-xl
-                  bg-gradient-to-r from-green-600/90 to-emerald-600/90
-                  hover:from-green-500 hover:to-emerald-500
-                  text-white font-medium shadow-lg shadow-green-900/30
-                  hover:shadow-green-700/40 transition-all duration-300
-                "
+                className="btn-primary"
               >
                 <MessageCircle size={22} />
                 Chat on WhatsApp
@@ -167,9 +155,9 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    text-slate-300 hover:text-white
+                    text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white
                     hover:scale-125 hover:rotate-6 transition-all duration-300
-                    hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]
+                    hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]
                   "
                 >
                   <Github size={40} strokeWidth={1.4} />
@@ -179,9 +167,9 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    text-slate-300 hover:text-white
+                    text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white
                     hover:scale-125 hover:-rotate-6 transition-all duration-300
-                    hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]
+                    hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]
                   "
                 >
                   <Linkedin size={40} strokeWidth={1.4} />
@@ -197,14 +185,10 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
             className="
-              lg:col-span-7
-              bg-gradient-to-br from-slate-900/80 to-slate-950/80
-              backdrop-blur-2xl border border-slate-700/50
-              rounded-2xl lg:rounded-3xl p-8 lg:p-10
-              shadow-2xl shadow-black/50
+              lg:col-span-7 glass-strong p-8 lg:p-10
             "
           >
-            <h3 className="text-3xl font-bold text-white mb-10 text-center">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">
               Send a Message
             </h3>
 
@@ -218,18 +202,18 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="
-                    peer w-full px-6 pt-8 pb-4 bg-slate-950/30 border border-slate-600/60
+                    peer w-full px-6 pt-8 pb-4 bg-gray-50/30 dark:bg-slate-950/30 border border-gray-300/60 dark:border-slate-600/60
                     rounded-xl focus:outline-none focus:border-indigo-500/70 focus:ring-2 focus:ring-indigo-500/20
-                    transition-all text-white text-lg placeholder-transparent
+                    transition-all text-gray-900 dark:text-white text-lg placeholder-transparent
                   "
                   placeholder=" "
                 />
                 <label
                   htmlFor="name"
                   className="
-                    absolute left-6 top-2.5 text-sm text-slate-400 font-medium
+                    absolute left-6 top-2.5 text-sm text-gray-600 dark:text-slate-400 font-medium
                     peer-placeholder-shown:top-6 peer-placeholder-shown:text-base
-                    peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-indigo-300
+                    peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-indigo-600 dark:peer-focus:text-indigo-300
                     transition-all pointer-events-none
                   "
                 >
@@ -246,18 +230,18 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="
-                    peer w-full px-6 pt-8 pb-4 bg-slate-950/30 border border-slate-600/60
+                    peer w-full px-6 pt-8 pb-4 bg-gray-50/30 dark:bg-slate-950/30 border border-gray-300/60 dark:border-slate-600/60
                     rounded-xl focus:outline-none focus:border-indigo-500/70 focus:ring-2 focus:ring-indigo-500/20
-                    transition-all text-white text-lg placeholder-transparent
+                    transition-all text-gray-900 dark:text-white text-lg placeholder-transparent
                   "
                   placeholder=" "
                 />
                 <label
                   htmlFor="email"
                   className="
-                    absolute left-6 top-2.5 text-sm text-slate-400 font-medium
+                    absolute left-6 top-2.5 text-sm text-gray-600 dark:text-slate-400 font-medium
                     peer-placeholder-shown:top-6 peer-placeholder-shown:text-base
-                    peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-indigo-300
+                    peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-indigo-600 dark:peer-focus:text-indigo-300
                     transition-all pointer-events-none
                   "
                 >
@@ -274,18 +258,18 @@ export default function Contact() {
                   required
                   rows={5}
                   className="
-                    peer w-full px-6 pt-8 pb-4 bg-slate-950/30 border border-slate-600/60
+                    peer w-full px-6 pt-8 pb-4 bg-gray-50/30 dark:bg-slate-950/30 border border-gray-300/60 dark:border-slate-600/60
                     rounded-xl focus:outline-none focus:border-indigo-500/70 focus:ring-2 focus:ring-indigo-500/20
-                    transition-all text-white text-lg placeholder-transparent resize-none
+                    transition-all text-gray-900 dark:text-white text-lg placeholder-transparent resize-none
                   "
                   placeholder=" "
                 />
                 <label
                   htmlFor="message"
                   className="
-                    absolute left-6 top-2.5 text-sm text-slate-400 font-medium
+                    absolute left-6 top-2.5 text-sm text-gray-600 dark:text-slate-400 font-medium
                     peer-placeholder-shown:top-6 peer-placeholder-shown:text-base
-                    peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-indigo-300
+                    peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-indigo-600 dark:peer-focus:text-indigo-300
                     transition-all pointer-events-none
                   "
                 >
@@ -297,12 +281,7 @@ export default function Contact() {
                 type="submit"
                 disabled={status === 'sending'}
                 className={`
-                  relative w-full py-4 px-8 rounded-xl overflow-hidden
-                  bg-gradient-to-r from-indigo-600 to-violet-600
-                  hover:from-indigo-500 hover:to-violet-500
-                  text-white font-semibold text-lg
-                  shadow-xl shadow-indigo-900/40 hover:shadow-indigo-700/50
-                  transition-all duration-400 flex items-center justify-center gap-3
+                  relative w-full py-4 px-8 rounded-xl overflow-hidden btn-primary
                   disabled:opacity-60 disabled:cursor-not-allowed group
                 `}
               >
@@ -332,8 +311,8 @@ export default function Contact() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     className="
                       flex items-center justify-center gap-3
-                      bg-green-900/30 text-green-300 py-4 px-6 rounded-xl
-                      border border-green-700/40 font-medium text-lg
+                      bg-green-100/30 dark:bg-green-900/30 text-green-700 dark:text-green-300 py-4 px-6 rounded-xl
+                      border border-green-300/40 dark:border-green-700/40 font-medium text-lg
                     "
                   >
                     <CheckCircle size={26} />
@@ -349,8 +328,8 @@ export default function Contact() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     className="
                       flex items-center justify-center gap-3
-                      bg-red-900/30 text-red-300 py-4 px-6 rounded-xl
-                      border border-red-700/40 font-medium text-lg
+                      bg-red-100/30 dark:bg-red-900/30 text-red-700 dark:text-red-300 py-4 px-6 rounded-xl
+                      border border-red-300/40 dark:border-red-700/40 font-medium text-lg
                     "
                   >
                     <AlertCircle size={26} />

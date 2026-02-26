@@ -1,4 +1,4 @@
-// components/Experience.jsx
+// components/Experience.jsx - Updated for light/dark
 import { motion } from 'framer-motion'
 import { Briefcase, Calendar, Building2, MapPin } from 'lucide-react'
 
@@ -55,9 +55,8 @@ export default function Experience() {
     <section
       id="experience"
       className="
-        relative py-20 sm:py-28 lg:py-36
-        px-5 sm:px-8 lg:px-12 xl:px-16
-        bg-gradient-to-b from-slate-950 via-indigo-950/20 to-slate-950
+        relative section-padding
+        bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:via-indigo-950/20 dark:to-slate-950
         overflow-hidden
       "
     >
@@ -67,7 +66,7 @@ export default function Experience() {
         <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-indigo-600/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl">
+      <div className="relative z-10 container-tight">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,9 +74,7 @@ export default function Experience() {
           transition={{ duration: 1 }}
           className="
             text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-            font-extrabold tracking-tight text-center mb-16 md:mb-20
-            bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500
-            bg-clip-text text-transparent
+            font-extrabold tracking-tight text-center mb-16 md:mb-20 gradient-text
           "
         >
           Professional Experience
@@ -103,16 +100,12 @@ export default function Experience() {
                   }`}
                 >
                   {/* Timeline dot – desktop only */}
-                  <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-indigo-600 border-4 border-slate-950 shadow-lg shadow-indigo-900/50 hidden lg:block z-10" />
+                  <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-indigo-600 border-4 border-white dark:border-slate-950 shadow-lg shadow-indigo-900/50 hidden lg:block z-10" />
 
                   {/* Experience Card */}
                   <div
                     className={`
-                      w-full lg:w-5/12
-                      bg-gradient-to-b from-slate-900/70 to-slate-950/80
-                      backdrop-blur-xl border border-slate-700/40
-                      rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-9
-                      shadow-xl shadow-black/40
+                      w-full lg:w-5/12 glass-strong p-6 md:p-8 lg:p-9
                       hover:shadow-2xl hover:shadow-indigo-900/30
                       transition-all duration-500 hover:-translate-y-3
                       ${isEven ? 'lg:mr-auto lg:pr-12' : 'lg:ml-auto lg:pl-12'}
@@ -120,16 +113,16 @@ export default function Experience() {
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                       <div>
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-1">
                           {exp.role}
                         </h3>
-                        <div className="flex items-center gap-2.5 text-indigo-400 font-medium">
+                        <div className="flex items-center gap-2.5 text-indigo-600 dark:text-indigo-400 font-medium">
                           <Building2 size={20} className="flex-shrink-0" />
                           <span>{exp.company}</span>
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:items-end gap-1 text-slate-400 text-sm md:text-base whitespace-nowrap">
+                      <div className="flex flex-col sm:items-end gap-1 text-gray-600 dark:text-slate-400 text-sm md:text-base whitespace-nowrap">
                         <div className="flex items-center gap-2">
                           <Calendar size={18} />
                           <span>{exp.period}</span>
@@ -143,7 +136,7 @@ export default function Experience() {
                       </div>
                     </div>
 
-                    <ul className="space-y-3.5 text-slate-300 text-base md:text-lg">
+                    <ul className="space-y-3.5 text-gray-700 dark:text-slate-300 text-base md:text-lg">
                       {exp.points.map((point, i) => (
                         <li key={i} className="flex gap-3.5">
                           <span className="mt-2 w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 flex-shrink-0" />
@@ -165,7 +158,7 @@ export default function Experience() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1.0, duration: 1.2 }}
-          className="text-center mt-20 md:mt-24 text-slate-400 italic text-lg"
+          className="text-center mt-20 md:mt-24 text-gray-600 dark:text-slate-400 italic text-lg"
         >
           <p>Always excited to tackle complex challenges and build impactful solutions with talented teams.</p>
         </motion.div>

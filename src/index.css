@@ -1,20 +1,84 @@
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────── */
+/*   Very important for dark mode in Tailwind v4     */
+/* ──────────────────────────────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* Your custom components & utilities */
 @layer components {
   .glass {
-    @apply bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-white/20 dark:border-white/10 rounded-xl shadow-xl;
+    @apply
+      bg-white/70 dark:bg-slate-900/70
+      backdrop-blur-md md:backdrop-blur-lg
+      border border-gray-200/70 dark:border-white/10
+      shadow-lg shadow-gray-200/50 dark:shadow-black/40
+      rounded-xl transition-all duration-300;
+  }
+
+  .glass-strong {
+    @apply
+      bg-white/85 dark:bg-slate-950/75
+      backdrop-blur-xl
+      border border-gray-300/60 dark:border-white/8
+      shadow-xl shadow-gray-300/40 dark:shadow-indigo-950/40
+      rounded-2xl;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent font-bold;
+    @apply
+      bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600
+      dark:from-cyan-400 dark:via-indigo-400 dark:to-violet-500
+      bg-clip-text text-transparent font-bold tracking-tight;
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition flex items-center gap-2;
+    @apply
+      px-6 py-3
+      bg-gradient-to-r from-indigo-600 to-purple-600
+      dark:from-indigo-500 dark:to-violet-600
+      text-white font-medium
+      rounded-full
+      shadow-md shadow-indigo-500/30 dark:shadow-indigo-700/40
+      hover:from-indigo-500 hover:to-purple-500
+      dark:hover:from-indigo-400 dark:hover:to-violet-500
+      hover:shadow-lg hover:shadow-indigo-500/40
+      transition-all duration-300
+      flex items-center gap-2.5
+      focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2
+      focus:ring-offset-white dark:focus:ring-offset-slate-950;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border border-gray-400 dark:border-gray-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition flex items-center gap-2;
+    @apply
+      px-6 py-3
+      border border-gray-400 dark:border-gray-600
+      text-gray-800 dark:text-gray-200
+      font-medium
+      rounded-full
+      hover:bg-gray-100/80 dark:hover:bg-gray-800/60
+      hover:border-gray-500 dark:hover:border-gray-500
+      active:bg-gray-200 dark:active:bg-gray-700
+      transition-all duration-300
+      flex items-center gap-2.5
+      shadow-sm hover:shadow
+      focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2
+      focus:ring-offset-white dark:focus:ring-offset-slate-950;
   }
+
+  .btn-muted {
+    @apply
+      px-5 py-2.5
+      text-gray-700 dark:text-gray-300
+      hover:text-gray-900 dark:hover:text-white
+      hover:bg-gray-100/70 dark:hover:bg-slate-800/60
+      rounded-lg
+      transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .section-padding { @apply px-5 sm:px-8 lg:px-12 xl:px-16 py-20 lg:py-28; }
+  .container-tight { @apply mx-auto max-w-7xl; }
 }
