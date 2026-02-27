@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Download, MousePointerClick } from 'lucide-react'
 import resume from '../asset/Udit CV.pdf' // adjust path
-import photo from '../asset/main profile (1).png' // adjust path
+import photo from '../asset/Profilepic.jpeg' // adjust path
 
 const taglines = [
   "Full Stack MERN Developer",
